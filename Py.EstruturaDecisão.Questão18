@@ -1,0 +1,13 @@
+dia = int(input("Digite um dia:"))
+if 0 < dia > 31:
+    print("Dia inválido")
+else:
+    mes = int(input("Digite um mes:"))
+    if 0 < mes > 12:
+        print("Mes inválido")
+    else:
+        ano = int(input("Digite um ano:"))
+        if 0 < ano > 2022:
+            print("Ano inválido")
+        else:
+            print("%d/%d/%d"%(dia,mes,ano))
