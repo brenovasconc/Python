@@ -1,0 +1,11 @@
+area = (float(input("Insira o valor dos metros a serem pintados:\n")))
+total = area + (0.1 * area)
+latas = total // 108
+x = (total / 108) - latas
+if x % 21.6 == 0:
+    galao = x / 21.6
+else:
+    galao = (x // 21.6) + 1
+
+print("A quantidade de latas necessarias será:%d\nA quantidade de galões necessaria será:%d\n"%(latas,galao))
+print("O valor gasto total será: %d"%((latas * 80)+(galao * 25)))
