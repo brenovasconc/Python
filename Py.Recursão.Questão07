@@ -1,0 +1,19 @@
+def maior(lista):
+    x = lista[0]
+    if len(lista) == 1:
+        print(lista[0])
+    elif x < lista[1]:
+        lista.remove(lista[0])
+        maior(lista)
+    elif x > lista[1]:
+        lista.remove(lista[1])
+        maior(lista)
+
+
+x = int(input("Digite a quantidade de termos que deseja inserir:"))
+lista = []
+for i in range(x):
+    num=int(input("Digite o valor do elemento %d:"%(i+1)))
+    lista.append(num)
+
+maior(lista)
