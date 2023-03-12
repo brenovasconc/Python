@@ -1,0 +1,51 @@
+ASSIM:
+print("-" * 30)
+print("AULA DE ALGORITIMOS 2")
+print("-" * 30)
+print("-" * 30)
+print("ALUNO: Breno")
+print("-" * 30)
+
+OU:
+
+def linhas():
+    print("-" * 30)
+
+linhas()
+print("AULA DE ALGORITIMOS 2")
+linhas()
+linhas()
+print("ALUNO: Breno")
+linhas()
+
+OU:
+
+def bloco(mensagem):
+    print("-" * 30)
+    print("%s"%mensagem)
+    print("-" * 30)
+
+nome = str(input("Digite o nome do aluno:\n"))
+bloco("AULA DE ALGORITIMOS 2")
+bloco("Aluno: %s"%nome)
+
+
+def Soma(x,y):
+    return x + y
+
+x = int(input("Insira o primeiro número:\n"))
+y = int(input("Insira o segundo número:\n"))
+
+print("O Resultado é: %d"%Soma(x,y))
+
+
+def Soma(* num):
+    s = 0
+    for x in num:
+        s += x
+    return s
+
+print(Soma(1,2,3,4,5,6,7,8,9,10,11))
+
+
+
