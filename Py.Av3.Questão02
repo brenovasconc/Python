@@ -1,0 +1,23 @@
+nome = str(input("Digite o seu nome:"))
+idade = int(input("Digite sua idade:"))
+comorbidade = []
+comorbidade.append(input("Possui comorbidades? SIM OU NÃO"))
+saude = []
+saude.append(input("Trabalhador da saude? SIM OU NÃO"))
+prof = []
+prof.append(input("Trabalhador da saude? SIM OU NÃO"))
+
+if saude[0] == 'SIM' or idade >= 75:
+    print("Fevereiro e Março de 2021")
+    exit()
+if 60 <= idade < 75:
+    print("Abril e Maio de 2021")
+    exit()
+if comorbidade[0] == 'SIM':
+    print("Maio e Junho de 2021")
+    exit()
+if prof[0] == 'SIM' :
+    print("Junho e Julho de 2021")
+    exit()
+if 0 < idade < 60:
+    print("Neste momento,não existe previsão de vacinação para a sua faixa")
