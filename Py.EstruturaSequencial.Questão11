@@ -1,0 +1,7 @@
+num1 = int(input("INSIRA O PRIMEIRO NUMERO:\n"))
+num2 = int(input("INSIRA O SEGUNDO NUMERO:\n"))
+num3 = float(input("INSIRA O TERCEIRO NUMERO:\n"))
+
+print("a = %d"%((num1*2)/(num2/2)))
+print("b = %d"%((3*num1)+num3))
+print("c = %d"%(num3*num3*num3))
