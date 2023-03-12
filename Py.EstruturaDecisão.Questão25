@@ -1,0 +1,28 @@
+p1 = int(input("Telefonou para a Vitima?\n [1] PARA SIM\n [0] PARA NÃO\n"))
+if p1 != 1 or p1 != 0:
+    print("RESPOSTA INVALIDA")
+p2 = int(input("Esteve no local do crime?\n [1] PARA SIM\n [0] PARA NÃO\n"))
+if (p2 != 1) or (p2 != 0):
+    print("RESPOSTA INVALIDA")
+p3 = int(input("Mora perto da vitima?\n [1] PARA SIM\n [0] PARA NÃO\n"))
+if (p3 != 1) or (p3 != 0):
+    print("RESPOSTA INVALIDA")
+p4 = int(input("Devia para a vitima?\n [1] PARA SIM\n [0] PARA NÃO\n"))
+if (p4 != 1) or (p4 != 0):
+    print("RESPOSTA INVALIDA")
+p5 = int(input("Já trabalhou com a vitima?\n [1] PARA SIM\n [0] PARA NÃO\n"))
+if (p5 != 1) or (p5 != 0):
+    print("RESPOSTA INVALIDA")
+result = p1 + p2 + p3 + p4 + p5
+
+if result == 2:
+    print("PESSOA SUSPEITA")
+elif result == 3 or result ==4:
+    print("CUMPLICE")
+elif result == 5:
+    print("ASSASSINO")
+elif result == 1 or result == 0:
+    print("INOCENTE")
+else:
+    print("ALGUMA RESPOSTA FOI INVALIDA, REFAZER O CODIGO")
+
