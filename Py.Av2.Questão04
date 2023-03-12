@@ -1,0 +1,10 @@
+num = int(input("Digite o numero que deseja fazer a tabuada:\n"))
+comeco = int(input("Digite o numero que deseja começar a tabuada:\n"))
+fim = int(input("Digite o numero que deseja finalizar a tabuada:\n"))
+
+if fim < comeco:
+    print("COMANDO INVALIDO")
+else:
+    i = 1
+    for i in range(comeco,fim+1):
+        print("%d x %d = %d"%(num,i,(num*i)))
