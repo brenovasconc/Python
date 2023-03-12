@@ -1,0 +1,9 @@
+def Soma(x,y,z):
+    return x + y + z
+
+
+a=3
+b=4
+c=6
+
+print("A Soma é: %d"%Soma(a,b,c))
