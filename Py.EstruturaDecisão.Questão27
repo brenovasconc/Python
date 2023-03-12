@@ -1,0 +1,17 @@
+maca = float (input("Digite a quantidade de quilos de maça:\n"))
+morango = float (input("Digite a quantidade de quilos de morango:\n"))
+if maca <= 5:
+    total1 = maca * 1.8
+else:
+    total1 = maca * 1.5
+
+if morango <= 5:
+    total2 = morango * 2.5
+else:
+    total2 = morango * 2.2
+
+valor = total1 + total2
+if ((maca+morango) > 8) or valor > 25:
+    print("O PREÇO PAGO SERÁ:%.2f"%(valor - (valor*0.1)))
+else:
+    print("O PREÇO PAGO SERÁ:%.2f"%valor)
