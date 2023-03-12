@@ -1,0 +1,15 @@
+def Impares(lista):
+    if len(lista) == 0:
+        return 0
+    else:
+        if lista[0] %2 == 0:
+            lista.remove(lista[0])
+            Impares(lista)
+        else:
+            print(lista[0])
+            lista.remove(lista[0])
+            Impares(lista)
+
+lista=[9,8,7,6,5,4,3,2,1]
+
+Impares(sorted(lista))
