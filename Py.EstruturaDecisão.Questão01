@@ -1,0 +1,9 @@
+num1= float (input("Insira o primeiro numero:\n"))
+num2= float (input("Insira o segundo numero:\n"))
+
+if num1 > num2:
+    print("%d"%num1)
+elif num2 > num1:
+    print("%d"%num2)
+else:
+    print("São iguais")
