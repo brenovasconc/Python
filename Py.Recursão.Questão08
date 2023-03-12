@@ -1,0 +1,18 @@
+x = 0
+def soma(lista,x):
+    if (len(lista) == 1):
+        x = x + lista[0]
+        return x
+    else:
+        x = x + lista[0]
+        lista.remove(lista[0])
+        soma(lista,x)
+
+
+
+
+
+lista=[1,2,3,4,5,6,7,8,9,10]
+
+print(soma(lista,x))
+
