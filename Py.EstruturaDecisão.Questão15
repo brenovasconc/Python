@@ -1,0 +1,13 @@
+a = float(input("Digite o primeiro lado:\n"))
+b = float(input("Digite o segundo lado:\n"))
+c = float(input("Digite o terceiro lado:\n"))
+
+if (a+b > c) or (a+c > b) or (b+c > a):
+    if a == b == c :
+        print("TRIANGULO EQUILATERO")
+    elif a != b != c:
+        print("TRIANGULO ESCALENO")
+    else:
+        print("TRIANGULO ISÓSCELES")
+else:
+    print("NAO É UM TRIANGULO")
