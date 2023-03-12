@@ -1,0 +1,17 @@
+dia = int(input("Digite o numero correspondente ao dia da semana:\n"))
+if dia == 1:
+    print("DOMINGO")
+elif dia == 2:
+    print("SEGUNDA")
+elif dia == 3:
+    print("TERÇA")
+elif dia == 4:
+    print("QUARTA")
+elif dia == 5:
+    print("QUINTA")
+elif dia == 6:
+    print("SEXTA")
+elif dia == 7:
+    print("SABADO")
+else:
+    print("VALOR DIGITADO INVALIDO")
