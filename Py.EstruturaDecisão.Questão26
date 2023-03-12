@@ -1,0 +1,18 @@
+litros = float(input("Digite a quantidade de litros desejados:"))
+tipo = str(input("Digite [G] para Gasolina\nDigite [A] para Alcool\n"))
+if tipo == 'G':
+    if litros <= 20:
+        gasto = (litros * 2.5) - (litros * 0.04)
+        print("Valor pago será:%.2f"%gasto)
+    else:
+        gasto = (litros * 2.5) - (litros * 0.03)
+        print("Valor pago será:%.2f"%gasto)
+elif tipo == 'A':
+    if litros <= 20:
+        gasto = (litros * 1.9) - (litros * 0.05)
+        print("Valor pago será:%.2f"%gasto)
+    else:
+        gasto = (litros * 1.9) - (litros * 0.06)
+        print("Valor pago será:%.2f"%gasto)
+else:
+    print("Tecla digitada errada")
