@@ -1,0 +1,4 @@
+horas=int(input("Digite a quantidade de horas trabalhadas:\n"))
+qntHora=int(input("Digite o valor da sua hora:\n"))
+salario = qntHora * horas
+print("O valor do seu salario é: %d\n"%(salario))
