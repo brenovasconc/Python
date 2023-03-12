@@ -1,0 +1,11 @@
+def Primos(a):
+    if a == 1 or a == 2 or a == 3 or a == 5 or a == 7:
+        print("É um numero primo")
+    else:
+        if a %2 == 0 or a %3 == 0 or a %5 == 0 or a %7 == 0:
+            print("Não é um numero primo")
+        else:
+            print("É um numero primo")
+
+a = int(input("Digite um numero:"))
+Primos(a)
