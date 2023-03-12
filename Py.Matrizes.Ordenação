@@ -1,0 +1,83 @@
+
+# Select Sort ( mais simples, mas mais lento)
+
+# lista = []
+# i = 0
+# while i < 9:
+#     numero = int(input('Digite os valores da lista:'))
+#     lista.append(numero)
+#     i += 1
+# lista2 = []
+# aux = lista[0]
+# x = 1
+# y = 0
+# print('Lista original:',lista)
+# for y in range(len(lista)):
+#     for x in range(len(lista)):
+#         y += 1
+#         if aux < lista[x]:
+#             aux = lista[x]
+#             x += 1
+#         if y == 9 and len(lista) > 1:
+#             lista.remove(aux)
+#             lista2.append(aux)
+#             aux = lista[0]
+#             y = 0
+#             if len(lista) == 0:
+#                 break
+# lista2.append(lista[0])
+# print('lista ordenada de forma decrescente:', lista2)
+# lista2.reverse()
+# print('lista ordenada de forma crescente:', lista2)
+# print('A soma dos valores da lista é:%d' % (sum(lista2)))
+
+
+
+
+# Quick Sorte (MAIS RAPIDO)
+
+
+
+def Ordenacao(lista):
+   quickSort(lista, 0, len(lista) - 1)
+
+def quickSort(lista, primeiro, ultimo):
+   if primeiro < ultimo:
+
+       meio = divisao(lista, primeiro, ultimo)
+
+       quickSort(lista, primeiro, meio - 1)
+       quickSort(lista, meio + 1, ultimo)
+
+
+def divisao(lista, primeiro, ultimo):
+   pivo = lista[primeiro]
+
+   marcadoresquerda = primeiro + 1
+   marcadordireita = ultimo
+
+   done = True
+   while done:
+
+       while marcadoresquerda <= marcadordireita and lista[marcadoresquerda] <= pivo:
+           marcadoresquerda = marcadoresquerda + 1
+
+       while lista[marcadordireita] >= pivo and marcadordireita >= marcadoresquerda:
+           marcadordireita = marcadordireita -1
+
+       if marcadordireita < marcadoresquerda:
+           done = False
+       else:
+           aux = lista[marcadoresquerda]
+           lista[marcadoresquerda] = lista[marcadordireita]
+           lista[marcadordireita] = aux
+   aux = lista[primeiro]
+   lista[primeiro] = lista[marcadordireita]
+   lista[marcadordireita] = aux
+
+
+   return marcadordireita
+
+lista = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+quickSort(lista)
+print(lista)
