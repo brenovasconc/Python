@@ -1,0 +1,27 @@
+salario = float(input("Digite o valor do seu salario:\n"))
+if salario <= 280:
+    newSalario = salario + (salario * 0.2)
+    print("O seu salario antigo era:%.2f\n"%salario)
+    print("O percentual de aumento foi de 20 porcento\n")
+    print("O valor do aumento foi:%.2f\n"%(salario * 0.2))
+    print("O salario atual é: %.2f"%newSalario)
+elif 280 < salario < 700:
+    newSalario = salario + (salario * 0.15)
+    print("O seu salario antigo era:%.2f\n"%salario)
+    print("O percentual de aumento foi de 15 porcento\n")
+    print("O valor do aumento foi:%.2f\n"%(salario * 0.15))
+    print("O salario atual é: %.2f"%newSalario)
+elif 700 < salario < 1500:
+    newSalario = salario + (salario * 0.1)
+    print("O seu salario antigo era:%.2f\n"%salario)
+    print("O percentual de aumento foi de 10 porcento\n")
+    print("O valor do aumento foi:%.2f\n"%(salario * 0.10))
+    print("O salario atual é: %.2f"%newSalario)
+elif 1500 >= salario:
+    newSalario = salario + (salario * 0.05)
+    print("O seu salario antigo era:%.2f\n"%salario)
+    print("O percentual de aumento foi de 5 porcento\n")
+    print("O valor do aumento foi:%.2f\n"%(salario * 0.05))
+    print("O salario atual é: %.2f"%newSalario)
+else:
+    print("Salario digitado inválido")
