@@ -1,0 +1,3 @@
+lado = float(input("Digite o valor do lado do Quadrado:\n"))
+area = lado * lado
+print("O valor da area é: %d\ne o dobro é:%d\n"%(area,area * 2))
