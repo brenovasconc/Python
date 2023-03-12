@@ -1,0 +1,7 @@
+pesca=(int(input("Digite o peso pescado:\n")))
+if pesca <= 50:
+    print("SEM MULTA")
+else:
+    excedente = pesca - 50
+    multa = excedente * 4
+    print("O valor excedido do limite foi:%d\nO valor da multa é:%d\n"%(excedente,multa))
