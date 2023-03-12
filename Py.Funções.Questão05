@@ -1,0 +1,7 @@
+def SomaImposto(Taxa,Custo):
+    return ((Taxa/100)*Custo)+Custo
+
+taxa=10
+custo=30
+
+print(SomaImposto(taxa,custo))
