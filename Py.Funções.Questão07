@@ -1,0 +1,20 @@
+def ValorPrestacao(ValorPagamento,Atraso):
+    if Atraso == 0:
+        return ValorPagamento
+    elif Atraso > 0:
+        return (0.03*ValorPagamento) + ((0.001 * Atraso) * ValorPagamento) + ValorPagamento
+
+
+lista = []
+while True:
+
+    ValorPagamento = float(input("Digite o valor do Pagamento:\n"))
+    if ValorPagamento == 0:
+        print("Prestações pagas:")
+        print(lista)
+        break
+    Atraso = float(input("Digite o valor dos dias em atraso:\n"))
+    print("O valor a ser pago será: %.2f"%ValorPrestacao(ValorPagamento,Atraso))
+    lista.append(ValorPrestacao(ValorPagamento,Atraso))
+
+
