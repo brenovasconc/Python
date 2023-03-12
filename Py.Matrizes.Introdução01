@@ -1,0 +1,96 @@
+matriz = [[1,2,3],[4,5,6],[7,8,9]]
+
+ MANUALMENTE
+print(matriz)
+print('--'*50)
+print("linha 0,colunha 0:",matriz[0][0])
+print("linha 0,colunha 1:",matriz[0][1])
+print("linha 0,colunha 2:",matriz[0][2])
+print("linha 1,colunha 0:",matriz[1][0])
+print("linha 1,colunha 1:",matriz[1][1])
+print("linha 1,colunha 2:",matriz[1][2])
+print("linha 2,colunha 0:",matriz[2][0])
+print("linha 2,colunha 1:",matriz[2][1])
+print("linha 2,colunha 2:",matriz[2][2])
+
+COM O FOR:
+for i in range(0,3):
+    for j in range(0,3):
+        print("Linha",i,"Coluna",j,"=",matriz[i][j])
+for linha in range(0,3):
+    for coluna in range(0,3):
+        print(f'[{matriz[linha][coluna]:^5}]', end = " ")
+    print()
+
+matriz = [[0,0,0],[0,0,0],[0,0,0]]
+pares = []
+impares = []
+
+
+for i in range(0,3):
+    for j in range(0,3):
+        matriz[i][j] = int(input("Insira o da linha %d,coluna %d:\n"%(i,j)))
+        if matriz[i][j] % 2 == 0:
+            pares.append(matriz[i][j])
+        else:
+            impares.append(matriz[i][j])
+
+print("Os pares são:%s"%pares)
+print("Os impares são:%s"%impares)
+print("%d"%sum(pares))
+print("%d"%sum(impares))
+
+
+
+for linha in range(0,3):
+    for coluna in range(0,3):
+        print(f'[{matriz[linha][coluna]:^5}]', end = " ")
+    print()
+
+
+matriz = [[0,0,0],[0,0,0],[0,0,0]]
+linha = []
+coluna = []
+x = int(input("Digite o valor da linha que deseja somar:\n"))
+y = int(input("Digite o valor da coluna que deseja somar:\n"))
+for i in range(0,3):
+    for j in range(0,3):
+        matriz[i][j] = int(input("Insira o da linha %d,coluna %d:\n"%(i,j)))
+        if i == x:
+            linha.append(matriz[i][j])
+        if j == y:
+            coluna.append(matriz[i][j])
+
+print("%d"%sum(linha))
+print("%d"%sum(coluna))
+
+somadospares = somaimpares = maiorvalor = somadacoluna = 0
+matriz = [[0,0,0],[0,0,0],[0,0,0]]
+for linha in range(0,3):
+    for coluna in range(0,3):
+        matriz[linha][coluna] = int(input("Digite um valor para linha %d e coluna %d:"%((linha,coluna))))
+print('-='*30)
+for linha in range(0,3):
+    for coluna in range(0,3):
+        print(f'[{matriz[linha][coluna]:^5}]', end='')
+        if matriz[linha][coluna] % 2 == 0:
+            somadospares += matriz[linha][coluna]
+        else:
+            somaimpares += matriz[linha][coluna]
+    print()
+print('-='*30)
+print('A soma dos valores pares é: %d'%somadospares)
+print('A soma dos valores pares é: %d'%somaimpares)
+
+linha = int(input("Digite o valor da linha que deseja saber as operações:"))
+coluna = int(input("Digite o valor da coluna que deseja saber as operações:"))
+for linha in range(0,3):
+    somadacoluna += matriz[linha][x-1]
+print('A soma dos valores da coluna %d é:%d'%(x-1,somadacoluna))
+for coluna in range(0,3):
+    if coluna == 0:
+        maiorvalor = matriz[1][coluna]
+    elif matriz[1][coluna] > maiorvalor:
+        maiorvalor = matriz[1][coluna]
+print("O maior valor da segunda linha é:%d"%maiorvalor)
+
