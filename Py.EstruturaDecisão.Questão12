@@ -1,0 +1,19 @@
+qntHora = (int(input("Insira a quantidade de horas trabalhadas:\n")))
+valorHora = (float(input("Insira o valor da sua hora:\n")))
+bruto = qntHora * valorHora
+if bruto <= 900:
+    IR = 0;
+elif 900 < bruto <= 1500:
+    IR = bruto * 0.05
+elif bruto > 1500:
+    IR = bruto * 0.1
+INSS = bruto * 0.1
+FGTS = bruto * 0.11
+descontos = IR + INSS
+liq = bruto - descontos
+print("+ Salario Bruto: R$%.2f"%bruto)
+print("(-) IR (11 porcento) : R$%.2f"%IR)
+print("(-) INSS (10 porcento) : R$%.2f"%INSS)
+print("- FGTS (11 porcento): R$%.2f"%FGTS)
+print("Os descontos foram: %.2f"%descontos)
+print("= Salario Liquido: R$%.2f"%liq)
