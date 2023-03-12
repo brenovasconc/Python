@@ -1,0 +1,7 @@
+def inverte(num):
+    x = str(num)
+    print(x[::-1])
+
+x = int(input("Digite um numero:"))
+
+inverte(x)
