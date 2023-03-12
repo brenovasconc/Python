@@ -1,0 +1,8 @@
+area = (float(input("Digite a area a ser pintada:\n")))
+qntTinta = area / 54
+if area % qntTinta == 0.0:
+    valor = (area/qntTinta) * 80
+    print("A Quantidade de galões necessarios é:%d\nO valor gasto será:%d\n"%(qntTinta,valor))
+else:
+    valor = (( (area // 54) + 1 ) * 80)
+    print("A Quantidade de galões necessarios é:%d\nO valor gasto será:%d\n"%(( (area // 54) + 1 ),valor))
