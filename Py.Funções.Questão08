@@ -1,0 +1,7 @@
+def digitos(num):
+    dig = str(num)
+    return len(dig)
+
+
+x = int(input("Digite um número:\n"))
+print("A quantidade de digitos é: %d"%digitos(x))
