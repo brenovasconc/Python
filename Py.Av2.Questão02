@@ -1,0 +1,58 @@
+
+
+
+# 1º primeiramente faz-se uma função para chamar outra função, reduzindo o numero de argumentos passados na main
+#fazendo chamar apenas pela lista
+def Ordenacao(lista):
+   quickSort(lista, 0, len(lista) - 1)
+
+#2º primeiro passo é dividir em 3 argumentos:
+# a lista que deseja ser ordenada, o primeiro e o ultimo termo.
+def quickSort(lista, primeiro, ultimo):
+    #agora dividimos a lista em duas lista menores, onde a primeira vai contar do inicio até o meio
+    # e a segunda terá seu inicio no termo subssequente ao meio e vai até o final
+    #e entao essas duas metades irão , por meio da recursao, serem divididas novamente
+   if primeiro < ultimo:
+
+       meio = divisao(lista, primeiro, ultimo)
+
+       quickSort(lista, primeiro, meio - 1)
+       quickSort(lista, meio + 1, ultimo)
+
+#3º é nessa terceira função que a ordenação realmente acontece.
+#primeiro passo é pegar o primeiro elemento da lista e transforma-lo numa variavel auxiliar que irá fazer as comparações.
+def divisao(lista, primeiro, ultimo):
+   pivo = lista[primeiro]
+#o marcador da esquerda será o primeiro termo apos o pivo(termo 1)
+#o marcador da direita será o ultimo termo da lista
+   marcadoresquerda = primeiro + 1
+   marcadordireita = ultimo
+#aqui ocorre a ordenação, setamos a variavel done como TRUE e enquanto ela permanecer assim, ocorrerá a comparação
+# dos elementos e ela só irá parar quando o da direita for menor que o da esquerda, então done será tratada como FALSE
+# e assim sairá do laço While e por fim retornar o elemento do marcador da direita
+   done = True
+   while done:
+
+       while marcadoresquerda <= marcadordireita and lista[marcadoresquerda] <= pivo:
+           marcadoresquerda = marcadoresquerda + 1
+
+       while lista[marcadordireita] >= pivo and marcadordireita >= marcadoresquerda:
+           marcadordireita = marcadordireita -1
+
+       if marcadordireita < marcadoresquerda:
+           done = False
+       else:
+           aux = lista[marcadoresquerda]
+           lista[marcadoresquerda] = lista[marcadordireita]
+           lista[marcadordireita] = aux
+   aux = lista[primeiro]
+   lista[primeiro] = lista[marcadordireita]
+   lista[marcadordireita] = aux
+
+
+   return marcadordireita
+
+#4º agora só precisamos chamar a primeira função para a lista e está feita a ordenação.
+lista = [23, 1, 9, 7, 3, 11, 13, 15, 8,12]
+Ordenacao(lista)
+print(lista)
