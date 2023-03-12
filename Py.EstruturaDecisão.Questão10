@@ -1,0 +1,10 @@
+turno = (str(input("Digite seu turno:")))
+
+if turno == 'manhã' or turno == 'm':
+    print("BOM DIA!")
+elif turno == 'tarde' or turno == 't':
+    print("BOA TARDE!")
+elif turno == 'noite' or turno == 'n':
+    print("BOA NOITE!")
+else:
+    print("TURNO INVALIDO")
