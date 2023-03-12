@@ -1,0 +1,21 @@
+def conversao(data):
+    data = data.split('/')
+    dia = int(data[0])
+    mes = int(data[1])
+    ano = int(data[2])
+    meses = ['Janeiro','Feveiro','Marco','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']
+    if (ano%4 == 0):
+        if(mes == 2 and dia > 29):
+            print("DATA INVALIDA")
+        else:
+            print("%d de %s de %d" % (dia,meses[mes-1], ano))
+
+    else:
+        if (mes == 2 and dia > 28):
+            print("DATA INVALIDA")
+        else:
+            print("%d de %s de %d" % (dia,meses[mes-1], ano))
+
+
+data = str(input("Digite sua Data no formato DD/MM/AAAA:\n"))
+conversao(data)
