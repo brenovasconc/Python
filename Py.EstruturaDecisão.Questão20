@@ -1,0 +1,13 @@
+av1 = float(input("Digite a nota de av1:\n"))
+av2 = float(input("Digite a nota de av2:\n"))
+av3 = float(input("Digite a nota de av3:\n"))
+media = (av1 + av2 + av3) / 3
+
+if media == 10:
+    print("APROVADO COM DISTINÇÃO, MEDIA: %.2f"%media)
+elif 7 <= media < 10:
+    print("APROVADO COM MEDIA: %.2f" % media)
+elif 0 < media < 7:
+    print("REPROVADO COM MEDIA: %.2f" % media)
+else:
+    print("NOTAS INVALIDAS")
