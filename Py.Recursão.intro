@@ -1,0 +1,21 @@
+def Soma(lista):
+    if len(lista) == 1:
+        return lista[0]
+    else:
+        soma = lista[0] + lista[1]
+        lista.pop(0)
+        lista.pop(0)
+        lista.insert(0, soma)
+        return Soma(lista)
+
+
+tam =int(input("Digite o Valor da lista desejada:\n"))
+
+lista = []
+
+for i in range(tam):
+    num = int(input("Digite o elemento %d da lista: \n"%(i+1)))
+    lista.append(num)
+
+print(Soma(lista))
+
