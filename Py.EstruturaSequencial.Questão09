@@ -1,0 +1,3 @@
+f=float(input("Digite a temperatura em graus F:\n"))
+c = 5 * ((f - 32) /9)
+print("O valor em graus c é: %dº"%c)
