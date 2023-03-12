@@ -1,0 +1,12 @@
+produto1 = float(input("Insira o valor do primeiro produto:\n"))
+produto2 = float(input("Insira o valor do segundo produto:\n"))
+produto3 = float(input("Insira o valor do terceiro produto:\n"))
+
+if produto1 < produto2 and produto1 < produto3:
+    print("COMPRE O PRODUTO UM")
+elif produto2 < produto1 and produto2 < produto3:
+    print("Compre o produto 2")
+elif produto3 < produto1 and produto3 < produto2:
+    print("Compro o produto 3")
+else:
+    print("produtos com mesmo valor")
