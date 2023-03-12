@@ -1,0 +1,11 @@
+def valor(num):
+    if num > 0:
+        print("P")
+    elif num <= 0:
+        print("N")
+    else:
+        print("numero invalido")
+
+x = int(input("Digite um valor:"))
+
+valor(x)
