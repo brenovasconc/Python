@@ -1,0 +1,11 @@
+num1 = int(input("Insira o numero 1:\n"))
+num2 = int(input("Insira o numero 2:\n"))
+num3 = int(input("Insira o numero 3:\n"))
+if num1 > num2 and num1 > num3:
+    print("PRIMEIRO MAIOR")
+elif num2 > num1 and num2 > num3:
+    print("SEGUNDO MAIOR")
+elif num3 > num1 and num3 > num2:
+    print("TERCEIRO MAIOR")
+else:
+    print("numeros inseridos iguais")
