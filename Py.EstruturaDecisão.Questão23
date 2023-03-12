@@ -1,0 +1,5 @@
+num1 = float(input("Insira um numero:"))
+if num1 % 1 == 0:
+    print("É UM NUMERO INTEIRO")
+else:
+    print("É UM NUMERO DECIMAL")
