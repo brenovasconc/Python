@@ -1,0 +1,11 @@
+x = int (input("Digite um valor menor do que mil:\n"))
+if 0 > x > 1000:
+    print("VALOR INVALIDO")
+else:
+    y = x // 100
+    print("São %d centenas\n"%y)
+    x = x - (y * 100)
+    y = x // 10
+    print("São %d dezenas\n"%y)
+    x = x - (y*10)
+    print("São %d unidades\n"%x)
