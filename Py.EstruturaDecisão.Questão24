@@ -1,0 +1,30 @@
+num1 =float(input("Digite o valor do primeiro numero:\n"))
+num2 =float(input("Digite o valor do segundo numero:\n"))
+op=int(input("Digite 1 para SOMA\nDigite 2 para SUBTRAÇÃO\nDigite 3 para MULTIPLICAÇÃO\nDigite 4 para DIVISÃO\n"))
+if op == 1:
+    result = num1 + num2
+elif op == 2:
+    result = num1 - num2
+elif op == 3:
+    result = num1 * num2
+elif op == 4:
+    result = num1 / num2
+else:
+    print("OPERAÇÃO INVALIDA")
+
+print("O resultado é: %.2f"%result)
+
+if result % 2 == 0:
+    print("Resultado é par.")
+else:
+    print("Resultado é impar")
+
+if result >= 0:
+    print("Resultado é positivo")
+else:
+    print("Resultado é negativo")
+
+if result % 1 == 0 :
+    print("Resultado é um numero inteiro")
+else:
+    print("Resultado é um numero decimal")
