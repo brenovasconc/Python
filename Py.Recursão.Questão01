@@ -1,0 +1,12 @@
+def loop(x):
+    x = int(input("Digite um valor:"))
+    if x>= 0 and x<=100:
+        lista = []
+        lista.append(x)
+        print(lista)
+        loop(x)
+    else:
+        print(lista)
+
+x = 0
+loop(x)
