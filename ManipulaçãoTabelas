@@ -1,0 +1,96 @@
+import gspread
+import time
+gc = gspread.service_account(filename='chatboot01-364722-28c12e753d51.json')
+sheets = \
+    {'VENDAS':'https://docs.google.com/spreadsheets/d/1U1XDkHXGwVWOR78kJbSO82je6w4ooM94VSMuJiGymVc/edit?usp=sharing'}
+for i in sheets.values():
+    sh = gc.open_by_url(i)
+
+# Printar valor X:
+ dado = sh.worksheet('Página1')
+ celula = dado.acell('F5').value
+ print("Lendo a Planilha: ", celula)
+
+# Soma das comissoes de Alice:
+ somaAlice = 0
+ for i in range(5,23):
+     dado = sh.worksheet('Página1')
+     celula = dado.acell(f'F{i}').value
+     if dado.acell(f'F{i}').value == 'Alice':
+         valor = dado.acell(f'H{i}').value.replace("R$", "").replace(",",".")
+         somaAlice = somaAlice + (float(valor))
+ print(somaAlice)
+
+# Soma de todas as Comissoes:
+ ComissaoTotal = 0
+ for i in range(5,23):
+     dado = sh.worksheet('Página1')
+     valor = dado.acell(f'H{i}').value.replace("R$","").replace(",",".")
+     ComissaoTotal = ComissaoTotal + (float(valor))
+ print(ComissaoTotal)
+
+# QUEM VENDEU MAIS:
+ totalAlice = 0
+ totalArthur = 0
+ totalMatheus = 0
+
+ for i in range(5,23):
+     time.sleep(5)
+     dado = sh.worksheet('Página1')
+     comissao = dado.acell(f'H{i}').value.replace("R$","")
+     valor = comissao.replace(",",".")
+     if dado.acell(f'F{i}').value == 'Alice':
+         totalAlice = totalAlice + (float(valor))
+    elif dado.acell(f'F{i}').value == 'Arthur':
+        totalArthur = totalArthur + (float(valor))
+    elif dado.acell(f'F{i}').value == 'Matheus':
+        totalMatheus = totalMatheus + (float(valor))
+print("A comissão da Alice foi de: R$ %d"%totalAlice)
+print("A comissão do Arthur foi de: R$ %d"%totalArthur)
+print("A comissão do Matheus foi de: R$ %d"%totalMatheus)
+if totalAlice > totalMatheus and totalAlice > totalArthur:
+    print("MAIOR COMISSÃO FOI DA ALICE")
+elif totalArthur > totalMatheus and totalArthur > totalAlice:
+    print("MAIOR COMISSÃO FOI DO ARTHUR")
+elif totalMatheus > totalAlice and totalMatheus > totalArthur:
+    print("MAIOR COMISSÃO FOI DO MATHEUS")
+
+# MAIOR E MENOR COMISSÃO:
+maiorComissao = 0
+menorComissao = 100000
+maiorVendedor = str()
+menorVendedor = str()
+for i in range(5,23):
+    dado = sh.worksheet('Página1')
+    comissao = dado.acell(f'H{i}').value.replace("R$","")
+    valor = float(comissao.replace(",","."))
+    if maiorComissao < valor:
+        maiorComissao = valor
+        maiorVendedor = dado.acell(f'F{i}').value
+    if menorComissao > valor:
+        menorComissao = valor
+        menorVendedor = dado.acell(f'F{i}').value
+
+print("Quem obteve a maior comissão foi %s que foi o valor de: R$ %d"%(maiorVendedor,maiorComissao))
+print("Quem obteve a menor comissão foi %s que foi o valor de: R$ %d"%(menorVendedor,menorComissao))
+
+
+#NOME DOS VENDEDORES:
+def repetidos(lista):
+    l = []
+    for i in lista:
+        if i not in l:
+            l.append(i)
+    l.sort()
+    return l
+
+vendedores=[]
+
+dado = sh.worksheet('Página1')
+vendedores.append(dado.acell('F5').value)
+
+for i in range(6,23):
+        if(dado.acell(f'F{i}').value != vendedores[0]):
+            vendedores.append(dado.acell(f'F{i}').value)
+
+print(repetidos(vendedores))
