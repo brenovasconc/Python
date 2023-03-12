@@ -1,0 +1,58 @@
+# DECLARAÇÃO DA MATRIZ:
+matriz = [0,0,0],[0,0,0],[0,0,0]
+SomaPares = []
+SomaImpares = []
+SomaDiagonal = []
+SomaLinha = []
+SomaColuna = []
+
+# FOR PARA PREENCHER A MATRIZ:
+for i in range(0,3):
+    for j in range(0,3):
+        matriz[i][j] = int(input("Digite o valor da linha %d e coluna %d:\n"%((i+1),(j+1))))
+
+# FOR PRA PRINTAR A MATRIZ:
+for i in range(0,3):
+    for j in range(0,3):
+        print(matriz[i][j])
+
+linha = int(input("Digite o valor da linha que deseja Somar:\n"))
+coluna = int(input("Digite o valor da coluna que deseja Soma:\n"))
+
+for i in range(0,3):
+    for j in range(0,3):
+        if matriz[i][j] % 2 == 0:
+            SomaPares.append(matriz[i][j])
+        elif matriz[i][j] % 2 != 0:
+            SomaImpares.append(matriz[i][j])
+        if i == j:
+            SomaDiagonal.append(matriz[i][j])
+        if i == (linha-1):
+            SomaLinha.append(matriz[i][j])
+        if j == (coluna-1):
+            SomaColuna.append(matriz[i][j])
+
+print("O valor da soma dos pares é: %d"%(sum(SomaPares)))
+print("O valor da soma dos impares é: %d"%(sum(SomaImpares)))
+print("O valor da soma da diagonal é: %d"%(sum(SomaDiagonal)))
+print("O valor da soma da linha desejada é:%d"%(sum(SomaLinha)))
+print("O valor da soma da coluna desejada é:%d"%(sum(SomaColuna)))
+
+
+#DESCOBRIR O MAIOR VALOR DA MATRIZ:
+maior = matriz[0][0]
+for i in range(0,3):
+    for j in range(0,3):
+        if maior < matriz[i][j]:
+            maior = matriz[i][j]
+print("O maior valor da matriz é:%d"%maior)
+
+
+y = int(input("Digite a coluna que deseja saber o maior valor:"))
+
+maiorColuna = matriz[0][y-1]
+for i in range(0,3):
+    if maiorColuna < matriz[i][y-1]:
+        maiorColuna = matriz[i][y-1]
+
+print("O valor é: %d"%maiorColuna)
