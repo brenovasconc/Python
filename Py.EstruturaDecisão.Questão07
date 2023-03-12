@@ -1,0 +1,18 @@
+num1 = int(input("Insira o numero 1:\n"))
+num2 = int(input("Insira o numero 2:\n"))
+num3 = int(input("Insira o numero 3:\n"))
+
+if num1 > num2 and num1 > num3:
+    print("MAIOR: %d"%num1)
+elif num2 > num1 and num2 > num3:
+    print("MAIOR: %d"%num2)
+elif num3 > num1 and num3 > num2:
+    print("MAIOR: %d"%num3)
+if num1 < num2 and num1 < num3:
+    print("MENOR: %d"%num1)
+elif num2 < num1 and num2 < num3:
+    print("MENOR: %d"%num2)
+elif num3 < num1 and num3 < num2:
+    print("MENOR: %d"%num3)
+else:
+    print("Numeros iguais")
