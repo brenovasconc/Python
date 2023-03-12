@@ -1,0 +1,16 @@
+av1 = float(input("DIGITE A PRIMEIRA NOTA:"))
+av2 = float(input("DIGITE A SEUNDA NOTA:"))
+media = ( av1 + av2 )/2
+
+if 10 >= media >= 9:
+    print("APROVADO COM CONCEITO 'A'")
+elif 9 > media >= 7.5:
+    print("APROVADO COM CONCEITO 'B'")
+elif 7.5 > media >= 6:
+    print("APROVADO COM CONCEITO 'C'")
+elif 6 > media >= 4:
+    print("REPROVADO COM CONCEITO 'D'")
+elif 4 > media > 0:
+    print("REPROVADO COM CONCEITO 'F'")
+else:
+    print("Notas Invalidas")
