@@ -1,0 +1,95 @@
+print("######################################\n")
+print("\tSUPERMERCADO TABAJARA\n")
+print("######################################\n")
+qnt = float(input("Insira aqui a quantidade de carne (em kilo) que deseja:\n"))
+carne = int(input("Escolha o tipo de carne:\n[1] PARA FILÉ DUPLO\n[2] PARA ALCATRA\n[3] PARA PICANHA\n"))
+if carne == 1:
+    if qnt <= 5:
+        valor = 4.9 * qnt
+    else:
+        valor = 5.8 * qnt
+    cartao = int(input("POSSUI CARTÃO DA LOJA? DIGITE [1] PARA SIM\n DIGITE [2] PARA NÃO"))
+    if cartao == 1:
+        print("~~CUMPOM FISCAL~~")
+        print("TIPO DA CARNE:File duplo ")
+        print("%.2f KILOS DE CARNE" % qnt)
+        print("VALOR TOTAL: %.2f" % valor)
+        print("COMPRA COM CARTÃO: valor do desconto = %.2f" % (valor * 0.05))
+        print("TOTAL DA COMPRA:%.2f" % (valor - (valor * 0.05)))
+    elif cartao == 2:
+        print("~~CUMPOM FISCAL~~")
+        print("TIPO DA CARNE:File Duplo ")
+        print("%.2f KILOS DE CARNE" % qnt)
+        print("VALOR TOTAL: %.2f" % valor)
+        print("COMPRA SEM CARTÃO: Desconto não aplicado")
+        print("TOTAL DA COMPRA:%.2f" % (valor))
+
+    else:
+        print("TECLA DIGITADA INVALIDA")
+elif carne == 2:
+    if qnt <= 5:
+        valor = 5.9 * qnt
+    else:
+        valor = 6.8 * qnt
+    cartao = int(input("POSSUI CARTÃO DA LOJA? DIGITE [1] PARA SIM\n DIGITE [2] PARA NÃO"))
+    if cartao == 1:
+        print("~~CUMPOM FISCAL~~")
+        print("TIPO DA CARNE: ALCATRA")
+        print("%.2f KILOS DE CARNE" % qnt)
+        print("VALOR TOTAL: %.2f" % valor)
+        print("COMPRA COM CARTÃO: valor do desconto = %.2f" % (valor * 0.05))
+        print("TOTAL DA COMPRA:%.2f" % (valor - (valor * 0.05)))
+    elif cartao == 2:
+        print("~~CUMPOM FISCAL~~")
+        print("TIPO DA CARNE: ALCATRA ")
+        print("%.2f KILOS DE CARNE" % qnt)
+        print("VALOR TOTAL: %.2f" % valor)
+        print("COMPRA SEM CARTÃO: Desconto não aplicado")
+        print("TOTAL DA COMPRA:%.2f" % (valor))
+
+    else:
+        print("TECLA DIGITADA INVALIDA")
+elif carne == 3:
+    if qnt <= 5:
+        valor = 6.9 * qnt
+    else:
+        valor = 7.8 * qnt
+    cartao = int(input("POSSUI CARTÃO DA LOJA? DIGITE [1] PARA SIM\n DIGITE [2] PARA NÃO"))
+    if cartao == 1:
+        print("~~CUMPOM FISCAL~~")
+        print("TIPO DA CARNE: PICANHA ")
+        print("%.2f KILOS DE CARNE" % qnt)
+        print("VALOR TOTAL: %.2f" % valor)
+        print("COMPRA COM CARTÃO: valor do desconto = %.2f" % (valor * 0.05))
+        print("TOTAL DA COMPRA:%.2f" % (valor - (valor * 0.05)))
+    elif cartao == 2:
+        print("~~CUMPOM FISCAL~~")
+        print("TIPO DA CARNE: PICANHA ")
+        print("%.2f KILOS DE CARNE" % qnt)
+        print("VALOR TOTAL: %.2f" % valor)
+        print("COMPRA SEM CARTÃO: Desconto não aplicado")
+        print("TOTAL DA COMPRA:%.2f" % (valor))
+
+    else:
+        print("TECLA DIGITADA INVALIDA")
+else:
+    print("NUMERO DIGITADO INVALIDO")
+
+cartao = int(input("POSSUI CARTÃO DA LOJA? DIGITE [1] PARA SIM\n DIGITE [2] PARA NÃO"))
+if cartao == 1:
+    print("~~CUMPOM FISCAL~~")
+    print("TIPO DA CARNE: ")
+    print("%.2f KILOS DE CARNE"%qnt)
+    print("VALOR TOTAL: %.2f"%valor)
+    print("COMPRA COM CARTÃO: valor do desconto = %.2f"%(valor*0.05))
+    print("TOTAL DA COMPRA:%.2f"%(valor-(valor*0.05)))
+elif cartao == 2:
+    print("~~CUMPOM FISCAL~~")
+    print("TIPO DA CARNE: ")
+    print("%.2f KILOS DE CARNE"%qnt)
+    print("VALOR TOTAL: %.2f"%valor)
+    print("COMPRA SEM CARTÃO: Desconto não aplicado")
+    print("TOTAL DA COMPRA:%.2f"%(valor))
+
+else:
+    print("TECLA DIGITADA INVALIDA")
