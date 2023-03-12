@@ -1,0 +1,8 @@
+letra = str(input("Digite uma letra F/M\n"))
+
+if letra == 'f' or letra == 'F':
+    print("FEMININO")
+elif letra == 'm' or letra == 'M':
+    print("MASCULINO")
+else:
+    print("LETRA INVALIDA")
