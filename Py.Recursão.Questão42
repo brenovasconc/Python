@@ -1,0 +1,27 @@
+def intervalos(lista):
+    lista1 = []
+    lista2 = []
+    lista3 = []
+    lista4 = []
+    for i in range(0,(len(lista))):
+        if 0 <= lista[i] <= 25:
+            lista1.append(lista[i])
+        elif 26 <= lista[i] <= 50:
+            lista2.append(lista[i])
+        elif 51 <= lista[i] <= 75:
+            lista3.append(lista[i])
+        elif 76 <= lista[i] <= 100:
+            lista4.append(lista[i])
+    print("No intervalo[0~25] temos: %s"%lista1)
+    print("No intervalo[26~50] temos: %s" % lista2)
+    print("No intervalo[51~75] temos: %s"%lista3)
+    print("No intervalo[76~100] temos: %s" % lista4)
+
+
+lista=[]
+x=0
+while x>= 0 and x<=100:
+    x = int(input("Digite um termo para adiconar a lista:"))
+    lista.append(x)
+
+intervalos(lista)
