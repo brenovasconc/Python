@@ -1,0 +1,9 @@
+av1 = float(input("Digite a primeira nota:\n"))
+av2 = float(input("Digite a segunda nota:\n"))
+media = (av1 + av2)/ 2
+if media == 10:
+    print("APROVADO COM EXITO")
+elif 10 > media >= 7:
+    print("APROVADO")
+else:
+    print("REPROVADO")
