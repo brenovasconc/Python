@@ -1,0 +1,17 @@
+def Conversao(hor,min):
+    if hor < 12:
+        print("%d:%d AM"%(hor,min))
+    else:
+        print("%d:%d PM"%((hor-12),min))
+
+while True:
+    print("Digite -1 para sair")
+    hor=int(input("Digite o valor das horas:\n"))
+    if hor == -1:
+        break
+    min = int(input("Digite o valor dos minutos:\n"))
+    if hor<= 24 >= 0 and 0 <= min <= 60:
+        Conversao(hor,min)
+    else:
+        print("Valor inválido")
+
