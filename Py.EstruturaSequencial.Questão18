@@ -1,0 +1,5 @@
+tam = float(input("Digite o tamanho do arquivo:\n"))
+veloc = float(input("Digite a velocidade da sua internet:\n"))
+tempo = (tam / veloc) / 60
+
+print("O Tempo de espera é: %.2f minutos"%tempo)
